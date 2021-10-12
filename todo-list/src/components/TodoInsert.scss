@@ -1,0 +1,33 @@
+.toDoInsert {
+  display: flex;
+  background-color: #130f40;
+
+  input {
+    padding: 0.5rem;
+    border: none;
+    color: #fff;
+    background: none;
+    font-size: 1rem;
+    line-height: 1.5;
+    outline: none;
+    flex: 1;
+    &::placeholder {
+      color: #d1d8e0;
+    }
+  }
+
+  button {
+    display: flex;
+    align-items: center;
+    padding: 0 0.8rem;
+    border: none;
+    color: #fff;
+    background-color: #dfe4ea;
+    outline: none;
+    cursor: pointer;
+    transition: 0.5s background-color ease-in-out;
+    &:hover {
+      background-color: #adb5bd;
+    }
+  }
+}

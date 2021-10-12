@@ -1,5 +1,12 @@
+import TodoTemplate from './components/TodoTemplate';
+import TodoInsert from './components/TodoInsert';
+
 const App = () => {
-  return <div>ToDo List 만들기</div>;
+  return (
+    <TodoTemplate>
+      <TodoInsert />
+    </TodoTemplate>
+  );
 };
 
 export default App;
