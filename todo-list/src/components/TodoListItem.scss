@@ -1,0 +1,40 @@
+.toDoListItem {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  &:nth-child(even) {
+    background-color: #fff6e2;
+  }
+
+  .checkbox {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    flex: 1;
+
+    svg {
+      font-size: 1.5rem;
+    }
+
+    .text {
+      margin-left: 0.3rem;
+      flex: 1;
+    }
+  }
+
+  .remove {
+    display: flex;
+    align-items: center;
+    font-size: 1.3rem;
+    color: #eb2f06;
+    cursor: pointer;
+    &:hover {
+      color: #b71540;
+    }
+  }
+
+  // .toDoListItem + .toDoListItem (항목 사이에 테두리 추가)
+  & + & {
+    border-top: 1px solid #d1ccc0;
+  }
+}
