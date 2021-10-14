@@ -20,6 +20,17 @@
       margin-left: 0.3rem;
       flex: 1;
     }
+
+    &.checked {
+      svg {
+        color: #182c61;
+      }
+
+      .text {
+        color: #acb4bd;
+        text-decoration: line-through;
+      }
+    }
   }
 
   .remove {
