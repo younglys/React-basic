@@ -46,6 +46,9 @@ const NewsItemBlock = styled.div`
 
     p {
       margin-top: 0.5rem;
+      white-space: normal;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
   }
 
