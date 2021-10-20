@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import NewsItem from './NewsItem';
 import axios from 'axios';
 
-const NewsList = () => {
+const NewsList = ({ category }) => {
   const [articles, setArticles] = useState(null);
   const [loading, setLoading] = useState(false);
 
@@ -11,17 +11,19 @@ const NewsList = () => {
     const fetchData = async () => {
       setLoading(true);
       try {
+        const query = category === 'all' ? '' : `&category=${category}`;
         const res = await axios.get(
-          'https://newsapi.org/v2/top-headlines?country=kr&apiKey=f0ddb10c94cc44fbadbdb1b4042cee79',
+          `https://newsapi.org/v2/top-headlines?country=kr${query}&apiKey=f0ddb10c94cc44fbadbdb1b4042cee79`,
         );
         setArticles(res.data.articles);
+        console.log(res.data.articles);
       } catch (e) {
         console.log(e);
       }
       setLoading(false);
     };
     fetchData();
-  }, []);
+  }, [category]);
 
   if (loading) {
     return <NewsListBlock>Loading...</NewsListBlock>;
